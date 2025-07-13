@@ -7,11 +7,11 @@
   <style>
     body {
       font-family: sans-serif;
-      max-width: 700px;
+      max-width: 720px;
       margin: 2rem auto;
       padding: 1rem;
       line-height: 1.6;
-      color: #333;
+      color: #222;
       background: linear-gradient(to bottom, #f9f9f9, #e9f1f5);
     }
     h1, h2 {
@@ -30,24 +30,49 @@
     a:hover {
       text-decoration: underline;
     }
-    code {
-      background: #f4f4f4;
-      padding: 2px 4px;
-      border-radius: 4px;
+    .avatar {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .contact {
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
+
+  <img src="michal_photo.jpg" alt="Michal Navratil" class="avatar" />
+
   <h1>Michal Navratil – Freelance Backend Developer</h1>
-  <p>Hi, I'm Michal, a backend developer with over 6 years of experience in Java, Spring Boot, Hibernate, and Kafka. I build reliable, performant, and maintainable backend systems, focusing on clean, practical code that gets the job done without overcomplicating things. I’m also exploring Go for efficient services.</p>
+  <p>
+    Hi, I'm Michal, a backend developer with over 6 years of experience building clean, reliable and maintainable systems. I specialize in <strong>Java</strong> (Spring Boot, Hibernate) and <strong>Kafka</strong>, and I also use <strong>Go</strong> for lightweight backend services.
+  </p>
+  <p>
+    I focus on practical, high-performance solutions — code that does the job, is easy to maintain, and avoids unnecessary complexity.
+  </p>
 
   <h2>What I Can Help With</h2>
   <ul>
-    <li>REST API development (Spring Boot, OpenAPI)</li>
+    <li>Designing and building robust REST APIs (Java, Go, OpenAPI)</li>
     <li>Kafka pipelines and event-driven architectures</li>
-    <li>Data processing and integrations (Oracle, PostgreSQL)</li>
-    <li>Backend performance tuning</li>
-    <li>Admin tools / utilities</li>
+    <li>Refactoring legacy code and simplifying overengineered systems</li>
+    <li>Database logic, integration and tuning (Oracle, PostgreSQL, Hibernate)</li>
+    <li>Performance tuning, debugging, profiling</li>
+    <li>Internal tools or admin panels (when needed)</li>
+  </ul>
+
+  <h2>Technologies I Use</h2>
+  <ul>
+    <li><strong>Languages:</strong> Java, Go, SQL</li>
+    <li><strong>Frameworks & Tools:</strong> Spring Boot, Hibernate, Kafka, Docker, Git</li>
+    <li><strong>Databases:</strong> Oracle, PostgreSQL</li>
+    <li><strong>Other:</strong> OpenAPI, Postman, Kibana, Linux</li>
+    <li><strong>Basic UI (when needed):</strong> Angular / React (for internal dashboards)</li>
   </ul>
 
   <h2>Code Examples</h2>
@@ -58,10 +83,15 @@
   </ul>
 
   <h2>Availability</h2>
-  <p>~4 hours per day, remote, EU time zone.</p>
+  <p>
+    Remote. EU time zone. Available ~4 hours/day.
+  </p>
 
   <h2>Get in Touch</h2>
-  <p>Email: <a href="mailto:michal@navratil.it">michal@navratil.it</a></p>
+  <div class="contact">
+    <p>Email: <a href="mailto:michal@navratil.it">michal@navratil.it</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/michal-navr%C3%A1til-81b11026a/" target="_blank">michal-navrátil</a></p>
+  </div>
+
 </body>
 </html>
-
