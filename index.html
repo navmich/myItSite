@@ -15,6 +15,18 @@
       color: #222;
       background: linear-gradient(to bottom, #f9f9f9, #e9f1f5);
     }
+    dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    row-gap: 0.4rem;
+    column-gap: 0.5rem;
+    }
+    dt {
+      font-weight: bold;
+    }
+    dd {
+      margin: 0;
+    }
     h1, h2 {
       color: #005f99;
     }
@@ -68,13 +80,13 @@
   </ul>
 
   <h2>Technologies I Use</h2>
-  <ul>
-    <li><strong>Languages:</strong> Java, Go, SQL</li>
-    <li><strong>Frameworks & Tools:</strong> Spring Boot, Hibernate, Kafka, Docker, Git</li>
-    <li><strong>Databases:</strong> Oracle, PostgreSQL</li>
-    <li><strong>Other:</strong> OpenAPI, Postman, Kibana, Linux</li>
-    <li><strong>Basic UI (when needed):</strong> Angular / React (for internal dashboards)</li>
-  </ul>
+  <dl>
+    <dt><strong>Languages:</strong></dt>        <dd>Java, Go, SQL</dd>
+    <dt><strong>Frameworks & Tools:</strong></dt> <dd>Spring Boot, Hibernate, Kafka, Docker, Git</dd>
+    <dt><strong>Databases:</strong></dt>         <dd>Oracle, PostgreSQL</dd>
+    <dt><strong>Other:</strong></dt>             <dd>OpenAPI, Postman, Kibana, Linux</dd>
+    <dt><strong>Basic UI (when needed):</strong></dt> <dd>Angular / React (for internal dashboards)</dd>
+  </dl>
 
   <h2>Code Examples</h2>
   <p>...in progress</p>
