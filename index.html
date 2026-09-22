@@ -3,46 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Michal Navratil - Freelance Backend Developer</title>
+
+  <title>Michal Navratil — Backend Reliability & Performance</title>
+
+  <meta
+    name="description"
+    content="Backend engineer focused on Java, Spring, PostgreSQL, Kafka, performance, data consistency and reliable data flows."
+  />
+
   <link rel="icon" href="flavicon_MN.png" type="image/png">
+
   <style>
     body {
-      font-family: sans-serif;
-      max-width: 720px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      max-width: 760px;
       margin: 2rem auto;
       padding: 1rem;
-      line-height: 1.6;
+      line-height: 1.65;
       color: #222;
       background: linear-gradient(to bottom, #f9f9f9, #e9f1f5);
     }
-    dl {
-    display: grid;
-    grid-template-columns: max-content 1fr;
-    row-gap: 0.4rem;
-    column-gap: 0.5rem;
-    }
-    dt {
-      font-weight: bold;
-    }
-    dd {
-      margin: 0;
-    }
+
     h1, h2 {
       color: #005f99;
     }
-    ul {
-      padding-left: 1.2rem;
+
+    h1 {
+      line-height: 1.25;
+      margin-bottom: 0.4rem;
     }
-    li {
-      margin-bottom: 0.5rem;
+
+    .subtitle {
+      font-size: 1.15rem;
+      color: #555;
+      margin-top: 0;
+      margin-bottom: 2rem;
     }
+
     a {
       color: #005f99;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
+
     .avatar {
       width: 160px;
       height: 160px;
@@ -50,75 +56,210 @@
       object-fit: cover;
       display: block;
       margin: 0 auto 1.5rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
     }
+
+    ul {
+      padding-left: 1.3rem;
+    }
+
+    li {
+      margin-bottom: 0.55rem;
+    }
+
+    dl {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      row-gap: 0.45rem;
+      column-gap: 1rem;
+    }
+
+    dt {
+      font-weight: 600;
+    }
+
+    dd {
+      margin: 0;
+    }
+
+    .callout {
+      margin: 2rem 0;
+      padding: 1.25rem;
+      border-left: 4px solid #005f99;
+      background: rgba(255,255,255,0.65);
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.65rem 1rem;
+      margin-top: 0.5rem;
+      background: #005f99;
+      color: white;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .button:hover {
+      text-decoration: none;
+      opacity: 0.9;
+    }
+
+    .divider {
+      border: 0;
+      border-top: 1px solid #ccc;
+      margin: 2rem 0;
+    }
+
     .contact {
-      margin-top: 2rem;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      dl {
+        grid-template-columns: 1fr;
+      }
+
+      dt {
+        margin-top: 0.5rem;
+      }
     }
   </style>
 </head>
+
 <body>
 
-  <img src="michal_photo.jpg" alt="Michal Navratil" class="avatar" />
+  <img
+    src="michal_photo.jpg"
+    alt="Michal Navratil"
+    class="avatar"
+  />
 
-  <h1>Michal Navratil – Freelance Backend Developer</h1>
-  <p>
-    Hi, I'm Michal, a backend developer with over 6 years of experience building clean, reliable and maintainable systems. I specialize in <strong>Java</strong> (Spring Boot, Hibernate) and <strong>Kafka</strong>, and I also use <strong>Go</strong> for lightweight backend services.
-  </p>
-  <p>
-    I focus on practical, high-performance solutions — code that does the job, is easy to maintain, and avoids unnecessary complexity.
+  <h1>Michal Navratil</h1>
+
+  <p class="subtitle">
+    Backend Reliability & Performance Engineer
   </p>
 
-  <h2>What I Can Help With</h2>
+  <p>
+    I'm a backend engineer with <strong>8+ years of software development experience</strong>,
+    focused on reliable and high-performance backend systems.
+  </p>
+
+  <p>
+    My primary stack is <strong>Java, Spring Boot, PostgreSQL and Kafka</strong>.
+    I focus particularly on problems that appear when systems meet real production load:
+    performance bottlenecks, transaction boundaries, concurrency, data consistency,
+    event delivery and operational reliability.
+  </p>
+
+  <div class="callout">
+    <strong>Current focus:</strong>
+    identifying why backend systems become slow, unreliable or inconsistent —
+    and turning the findings into measurable, practical improvements.
+    <br>
+    <a href="/audit/" class="button">Performance & Data Consistency Audits</a>
+  </div>
+
+  <h2>What I Work On</h2>
+
   <ul>
-    <li>Designing and building robust REST APIs (Java, Go, OpenAPI)</li>
-    <li>Kafka pipelines and event-driven architectures</li>
-    <li>Refactoring legacy code and simplifying overengineered systems</li>
-    <li>Database logic, integration and tuning (Oracle, PostgreSQL, Hibernate)</li>
-    <li>Performance tuning, debugging, profiling</li>
-    <li>Internal tools or admin panels (when needed)</li>
+    <li>
+      <strong>Backend performance</strong> —
+      latency, p95/p99 bottlenecks, profiling and production diagnostics
+    </li>
+
+    <li>
+      <strong>Database performance</strong> —
+      SQL execution plans, indexing, locking, contention and transaction behaviour
+    </li>
+
+    <li>
+      <strong>Data consistency</strong> —
+      concurrency, idempotency, duplicate processing and transactional correctness
+    </li>
+
+    <li>
+      <strong>Event-driven systems</strong> —
+      Kafka, outbox/inbox patterns, retries, failure handling and event delivery
+    </li>
+
+    <li>
+      <strong>Observability</strong> —
+      metrics, tracing and evidence-based diagnosis of production behaviour
+    </li>
+
+    <li>
+      <strong>Backend architecture</strong> —
+      keeping systems understandable, maintainable and operationally predictable
+    </li>
   </ul>
 
-  <h2>Technologies I Use</h2>
+  <h2>Technology</h2>
+
   <dl>
-    <dt><strong>Languages:</strong></dt>        <dd>Java, Go, SQL</dd>
-    <dt><strong>Frameworks & Tools:</strong></dt> <dd>Spring Boot, Hibernate, Kafka, Docker, Git</dd>
-    <dt><strong>Databases:</strong></dt>         <dd>Oracle, PostgreSQL</dd>
-    <dt><strong>Other:</strong></dt>             <dd>OpenAPI, Postman, Kibana, Linux</dd>
-    <dt><strong>Basic UI (when needed):</strong></dt> <dd>Angular / React (for internal dashboards)</dd>
+    <dt>Backend</dt>
+    <dd>Java, Spring Boot, Spring, Hibernate</dd>
+
+    <dt>Messaging</dt>
+    <dd>Apache Kafka, event-driven architectures</dd>
+
+    <dt>Databases</dt>
+    <dd>PostgreSQL, Oracle, SQL</dd>
+
+    <dt>Reliability</dt>
+    <dd>
+      Transactions, idempotency, outbox/inbox,
+      concurrency, retry and failure handling
+    </dd>
+
+    <dt>Performance</dt>
+    <dd>
+      JVM profiling, SQL analysis, execution plans,
+      application and database bottlenecks
+    </dd>
+
+    <dt>Observability</dt>
+    <dd>
+      Metrics, tracing, logging,
+      OpenTelemetry / Micrometer concepts
+    </dd>
+
+    <dt>Platform</dt>
+    <dd>Linux, Docker, Git</dd>
   </dl>
 
-  <h2>Code Examples</h2>
-  <p>...in progress</p>
-<!--   <ul>
-    <li><a href="https://github.com/your-github/spring-rest-api-example" target="_blank">Spring Boot REST API example (GitHub)</a></li>
-    <li><a href="https://github.com/your-github/kafka-integration-sample" target="_blank">Kafka producer/consumer config (GitHub)</a></li>
-    <li><a href="https://gist.github.com/your-github/abcdef123456" target="_blank">Go microservice hello world (Gist)</a></li>
+  <h2>Projects & Technical Work</h2>
+
+  <p>
+    I build production-oriented backend projects and technical labs focused on
+    concurrency, performance, reliable event processing and failure scenarios.
+  </p>
+
+  <p>
+    Case studies and technical write-ups are being added gradually.
+  </p>
+
+  <h2>Availability</h2>
+
+  <ul>
+    <li><strong>Contract / B2B</strong> — preferred</li>
+    <li><strong>Remote</strong> — preferred</li>
+    <li><strong>Location</strong> — EU / EEA / Switzerland</li>
+    <li><strong>Languages</strong> — English, Czech</li>
   </ul>
- -->
-  <div class="section">
-    <h2>Availability</h2>
-<ul>
-  <li><strong>Contract (B2B)</strong> — preferred</li>
-  <li><strong>Remote</strong> — preferred • Hybrid / Onsite possible</li>
-  <li><strong>Full-time</strong> — preferred • Part-time possible</li>
-  <li><strong>Location</strong> — EU / LI / CH • EU citizen, relocation-ready</li>
-  <li><strong>Start</strong> — upon agreement</li>
-</ul>
 
-<hr class="divider">
-
-<dl>
-  <dt>Time zone</dt><dd>EU / CET (Europe/Prague)</dd>
-  <dt>Languages</dt><dd>English (working language), Czech (native)</dd>
-</dl>
-  </div>
+  <hr class="divider">
 
   <h2>Get in Touch</h2>
+
   <div class="contact">
-    <p>Email: <a href="mailto:michal@navratil.it">michal@navratil.it</a></p>
+    <p>
+      Email:
+      <a href="mailto:michal@michalnavratil.com">
+        michal@michalnavratil.com
+      </a>
+    </p>
   </div>
-<script data-goatcounter="https://navratil-it.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+
 </body>
 </html>
