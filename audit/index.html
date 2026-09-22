@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Backend Performance & Data Consistency Audit — Michal Navratil</title>
+
+  <meta
+    name="description"
+    content="Technical audits for Java, Spring, PostgreSQL and Kafka systems focused on performance bottlenecks, data consistency and production reliability."
+  />
+
+  <link rel="icon" href="../flavicon_MN.png" type="image/png">
+
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      max-width: 780px;
+      margin: 2rem auto;
+      padding: 1rem;
+      line-height: 1.65;
+      color: #222;
+      background: linear-gradient(to bottom, #f9f9f9, #e9f1f5);
+    }
+
+    h1, h2 {
+      color: #005f99;
+    }
+
+    h1 {
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      margin-top: 2.2rem;
+    }
+
+    a {
+      color: #005f99;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      padding-left: 1.3rem;
+    }
+
+    li {
+      margin-bottom: 0.55rem;
+    }
+
+    .subtitle {
+      font-size: 1.18rem;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+
+    .callout {
+      background: rgba(255,255,255,0.7);
+      border-left: 4px solid #005f99;
+      padding: 1.25rem;
+      margin: 2rem 0;
+    }
+
+    .finding {
+      background: rgba(255,255,255,0.55);
+      padding: 1rem 1.2rem;
+      margin: 1rem 0;
+      border-radius: 4px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.7rem 1.1rem;
+      margin-top: 0.5rem;
+      background: #005f99;
+      color: white;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .button:hover {
+      text-decoration: none;
+      opacity: 0.9;
+    }
+
+    .back {
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+    }
+
+    .small {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid #ccc;
+      margin: 2.5rem 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="back">
+    <a href="/">← Michal Navratil</a>
+  </div>
+
+  <h1>Backend Performance & Data Consistency Audit</h1>
+
+  <p class="subtitle">
+    Evidence-based diagnostics for Java, Spring, PostgreSQL and Kafka systems.
+  </p>
+
+  <p>
+    Production backend problems are often difficult because the visible symptom
+    is not where the actual problem originates.
+  </p>
+
+  <p>
+    A slow API may originate in SQL, locking, connection pool exhaustion,
+    application code or an external dependency.
+    A duplicated business operation may originate in retry behaviour,
+    transaction boundaries, Kafka delivery semantics or missing idempotency.
+  </p>
+
+  <p>
+    The purpose of the audit is to move from
+    <strong>symptoms and assumptions</strong>
+    to
+    <strong>evidence, root causes and actionable remediation</strong>.
+  </p>
+
+  <div class="callout">
+    <strong>Typical scope:</strong><br>
+    Java / Spring Boot · PostgreSQL · Kafka · Hibernate · production diagnostics
+  </div>
+
+  <h2>Performance Audit</h2>
+
+  <p>
+    Suitable when a backend system is slow, unstable under load,
+    increasingly expensive to operate or difficult to diagnose.
+  </p>
+
+  <ul>
+    <li>p95 / p99 latency investigation</li>
+    <li>slow endpoints and request paths</li>
+    <li>SQL and query-plan analysis</li>
+    <li>missing or ineffective indexes</li>
+    <li>N+1 and ORM-related performance problems</li>
+    <li>database locks and contention</li>
+    <li>long-running transactions</li>
+    <li>connection-pool exhaustion</li>
+    <li>thread-pool and application bottlenecks</li>
+    <li>JVM profiling and allocation / GC investigation</li>
+    <li>load-related degradation</li>
+  </ul>
+
+  <h2>Data Consistency & Reliability Audit</h2>
+
+  <p>
+    Suitable for systems where correctness across requests,
+    transactions or asynchronous processing is critical.
+  </p>
+
+  <ul>
+    <li>transaction boundary review</li>
+    <li>concurrency and race conditions</li>
+    <li>idempotency</li>
+    <li>duplicate processing</li>
+    <li>lost or partially processed operations</li>
+    <li>Kafka delivery and consumer behaviour</li>
+    <li>retry and failure handling</li>
+    <li>outbox / inbox patterns</li>
+    <li>event ordering assumptions</li>
+    <li>consistency between database and messaging systems</li>
+  </ul>
+
+  <h2>Observability Baseline</h2>
+
+  <p>
+    If the system does not currently expose enough information to diagnose
+    production behaviour, observability can be established before or as part
+    of the investigation.
+  </p>
+
+  <ul>
+    <li>application and JVM metrics</li>
+    <li>HTTP latency and error metrics</li>
+    <li>database visibility</li>
+    <li>connection-pool metrics</li>
+    <li>distributed tracing</li>
+    <li>correlation / trace IDs</li>
+    <li>focused dashboards for backend diagnosis</li>
+  </ul>
+
+  <h2>How the Audit Works</h2>
+
+  <div class="finding">
+    <strong>1. Scope the problem</strong><br>
+    Define the observed symptoms, business impact and available evidence.
+  </div>
+
+  <div class="finding">
+    <strong>2. Collect evidence</strong><br>
+    Review metrics, traces, logs, database statistics, configuration and relevant code.
+  </div>
+
+  <div class="finding">
+    <strong>3. Form and test hypotheses</strong><br>
+    Separate correlation from causation and reproduce problems where practical.
+  </div>
+
+  <div class="finding">
+    <strong>4. Identify findings</strong><br>
+    Findings are based on observable evidence rather than assumptions.
+  </div>
+
+  <div class="finding">
+    <strong>5. Recommend remediation</strong><br>
+    Provide concrete technical changes ranked by impact, risk and effort.
+  </div>
+
+  <div class="finding">
+    <strong>6. Verify</strong><br>
+    Where possible, compare behaviour before and after remediation.
+  </div>
+
+  <h2>Deliverables</h2>
+
+  <p>
+    A typical audit produces a technical report containing:
+  </p>
+
+  <ul>
+    <li>executive summary</li>
+    <li>observed system behaviour</li>
+    <li>confirmed findings</li>
+    <li>supporting evidence</li>
+    <li>root-cause analysis where established</li>
+    <li>risk and impact assessment</li>
+    <li>prioritised remediation recommendations</li>
+    <li>areas requiring further investigation</li>
+  </ul>
+
+  <h2>Principles</h2>
+
+  <ul>
+    <li>
+      <strong>Evidence over intuition.</strong>
+      No finding without supporting data.
+    </li>
+
+    <li>
+      <strong>Read-only where practical.</strong>
+      Production systems are primarily observed, not experimented on.
+    </li>
+
+    <li>
+      <strong>No unnecessary complexity.</strong>
+      The objective is to remove problems, not introduce fashionable architecture.
+    </li>
+
+    <li>
+      <strong>Measurable outcomes.</strong>
+      Performance changes should be benchmarked where possible.
+    </li>
+
+    <li>
+      <strong>Clear uncertainty.</strong>
+      If available evidence is insufficient to establish a root cause,
+      the report should say so explicitly.
+    </li>
+  </ul>
+
+  <h2>Technology Focus</h2>
+
+  <p>
+    Java · Spring Boot · Hibernate · PostgreSQL · Oracle · Apache Kafka · SQL ·
+    Linux · Docker · metrics · tracing · profiling
+  </p>
+
+  <hr>
+
+  <h2>Discuss a Problem</h2>
+
+  <p>
+    If your backend is slow, behaves unpredictably under load,
+    or you are concerned about data consistency,
+    send me a short description of the system and the problem.
+  </p>
+
+  <a
+    class="button"
+    href="mailto:michal@michalnavratil.com?subject=Backend audit enquiry"
+  >
+    Contact me
+  </a>
+
+  <p class="small">
+    Michal Navratil · Backend Reliability & Performance
+  </p>
+
+</body>
+</html>
